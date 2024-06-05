@@ -27,6 +27,9 @@ app.use('/api/v1/auth',userRouter)
 // app.use('/api/v1/reacts',reactRouter)
 // app.use('/api/v1/follow',followRouter)
 
+app.get("/", (req, res) => {
+  res.send('welcome')
+})
 
 
 const run = async () => {
