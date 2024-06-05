@@ -5,7 +5,7 @@ require("dotenv").config();
 const connectDb = require("./db/db");
 const cors = require('cors')
 const userRouter = require('./routes/userRoute')
-// const postRouter = require('./routes/postRoutes')
+const postRouter = require('./routes/postRoute')
 // const reactRouter = require('./routes/reactRoutes')
 // const followRouter = require('./routes/followersRoutes')
 const bodyParser = require('body-parser')
@@ -22,7 +22,7 @@ app.use(bodyParser())
 // routes 
 
 app.use('/api/v1/auth',userRouter)
-// app.use('/api/v1/posts',postRouter)
+app.use('/api/v1/posts',postRouter)
 // app.use('/api/v1/comment',commentRouter)
 // app.use('/api/v1/reacts',reactRouter)
 // app.use('/api/v1/follow',followRouter)
